@@ -11,6 +11,8 @@ import { NoteTag } from "../../components/NoteTag"
 
 import { FiArrowLeft, FiClock } from "react-icons/fi"
 
+import avatarPlaceHolder from "../../assets/avatar_placeholder.svg"
+
 
 export function MovieNoteDetails(){
     const navigate = useNavigate();

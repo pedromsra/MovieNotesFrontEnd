@@ -36,7 +36,7 @@ export const Container = styled.div`
 
 export const Head = styled.div`
     grid-area: head;
-    max-width: 113.7rem;
+    width: 113.7rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -77,7 +77,7 @@ export const Notes = styled.div `
 
     overflow-y: scroll;
     scrollbar-gutter: stable;
-    max-width: 113.7rem;
+    width: 113.7rem;
     margin: 0 auto;
 
     display: flex;

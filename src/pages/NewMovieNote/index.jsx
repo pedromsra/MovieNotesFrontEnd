@@ -24,6 +24,9 @@ export function NewMovieNote(){
     const [newTag, setNewTag] = useState("")
 
     async function handleSave(){
+        if(newTag !== ""){
+            return alert("Ficou")
+        }
         const note = {
             title,
             rating,
@@ -74,11 +77,11 @@ export function NewMovieNote(){
                 </Form>
                 <p>Marcadores</p>
                 <Footer>
-                    {tags.map(tag=><NoteNewTag isNew = "false" value={tag} type = "text" readOnly="true" onClick={()=>handleRemoveTag(tag)} />)}
+                    {tags.map(tag=><NoteNewTag isNew = "false" key={String(tags.indexOf(tag))} value={tag} type = "text" readOnly onClick={()=>handleRemoveTag(tag)} />)}
                     <NoteNewTag isNew = "true" type = "text" value={newTag} placeholder="Novo Marcador" onClick={handleNewTag} onChange={e=>setNewTag(e.target.value)} />
                 </Footer>
                 <RouteButtons>
-                    <Button title="Excluir Filme" onClick={handleExcludeNote}/>
+                    <Button title="Cancelar" onClick={handleExcludeNote}/>
                     <Button title="Salvar alterações" onClick={handleSave}/>
                 </RouteButtons>
             </main>
