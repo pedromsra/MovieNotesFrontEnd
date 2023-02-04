@@ -36,9 +36,7 @@ export function Profile(){
             password: passwordNew,
             oldPassword: passwordOld
         }
-        console.log("oi1")
         const userUpdated = Object.assign(user, updated)
-        console.log("oi1")
         await updateProfile(userUpdated, avatarFile)
 
         navigate("/")
