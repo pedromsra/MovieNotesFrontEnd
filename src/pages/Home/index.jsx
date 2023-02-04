@@ -40,17 +40,19 @@ export function Home(){
                     <div><h1>Meus filmes</h1></div>
                     <div onClick={handleNewNote}><button><FiPlus/>Adicionar filme</button></div>
                 </Head>
-                <Notes >
-                    {movieNotes.map(note=>{
-                        return (<div key={String(note.id)} onClick={()=>handleDetails(note.id)}><NoteHead 
-                        data={note}
-                        />
-                        <p>{note.description}</p>
-                        <NoteTag 
-                            data={note}
-                        /></div>)
-                    })}
-                </Notes>
+                {movieNotes &&
+                    <Notes >
+                        {movieNotes.map(note=>{
+                            return (<div key={String(note.id)} onClick={()=>handleDetails(note.id)}><NoteHead 
+                                data={note}
+                                />
+                                <p>{note.description}</p>
+                                <NoteTag 
+                                    data={note}
+                                /></div>)
+                        })}
+                    </Notes>
+                }
             </main>
         </Container>
     )

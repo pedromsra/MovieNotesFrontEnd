@@ -31,11 +31,23 @@ export const Header = styled.div`
     
     grid-area: header;
     display: flex;
-    align-items: center;
     justify-content: flex-start;
 
+    > div {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+
+        transition: filter .3s;
+
+        &:hover {
+            filter: brightness(.9);
+            cursor: pointer;
+        }
+    }
+
     @media (max-width: 700px) {
-        padding: 6.4rem 2rem;
+        padding: 6.4rem 4rem;
     }
 
 `;

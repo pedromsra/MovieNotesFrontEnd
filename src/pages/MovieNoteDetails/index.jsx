@@ -27,7 +27,6 @@ export function MovieNoteDetails(){
         async function fetchNote(){
             const response = await api.get(`/movie_notes/${params.id}`)
             setMovieNote(response.data)
-            console.log(movieNote)
         }
         fetchNote()
     },[])

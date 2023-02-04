@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
+
     height: 100vh;
     
     display: grid;
@@ -10,12 +11,14 @@ export const Container = styled.div`
     "header"
     "content"
     ;
+    justify-items: center;
     
     > main {
         grid-area: content;
         overflow-y: hidden;
 
         width: 100%;
+        max-width: 113rem;
 
         display: grid;
         grid-template-rows: 4.2rem auto;
@@ -23,7 +26,6 @@ export const Container = styled.div`
         "head"
         "notes"
         ;
-        place-content: center;
         gap: 4rem;
 
         padding: 5.3rem 2rem;
@@ -36,7 +38,7 @@ export const Container = styled.div`
 
 export const Head = styled.div`
     grid-area: head;
-    width: 113.7rem;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -77,7 +79,7 @@ export const Notes = styled.div `
 
     overflow-y: scroll;
     scrollbar-gutter: stable;
-    width: 113.7rem;
+    width: 100%;
     margin: 0 auto;
 
     display: flex;

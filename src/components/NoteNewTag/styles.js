@@ -15,7 +15,7 @@ export const Container = styled.div`
     background-color: ${({theme, newtag}) => newtag ? `transparent` : `${theme.COLORS.BACKGROUND_400}`};
 
     > input {
-        width: 22.5rem;
+        width: clamp(10rem, -5.5rem + 40vw, 28.5rem);
         height: 5.6rem;
 
         padding: 1.6rem;

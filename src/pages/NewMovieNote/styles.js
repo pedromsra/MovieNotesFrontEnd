@@ -9,10 +9,12 @@ export const Container = styled.div`
     "header"
     "content"
     ;
+    justify-items: center;
 
     main {
         padding: 4rem 2rem;
         width: 100%;
+        max-width: 113rem;
         grid-area: content;
 
         overflow-y: auto;
@@ -26,7 +28,6 @@ export const Container = styled.div`
         "text"
         "footer"
         "buttons";
-        place-content: center;
     }
 
     p {
@@ -43,12 +44,11 @@ export const Container = styled.div`
 `;
 
 export const Head = styled.div`
-    width: 100rem;
-    height: 50rem;
+    width: 100%;
+    
     grid-area: head;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     gap: 2.4rem;
 
     margin-bottom: 4rem;
@@ -70,19 +70,10 @@ export const Head = styled.div`
         font-size: 3.6rem;
         line-height: 4.7rem;
     }
-
-    @media (max-width: 1100px) {
-        width: 60rem;
-        height: 34rem;
-    }
-    @media (max-width: 700px) {
-        width: 45rem;
-        height: 34rem;
-    }
 `;
 
 export const Form = styled.form`
-    width: 100rem;
+    width: 100%;
     grid-area: form;
 
     display: flex;
@@ -97,16 +88,7 @@ export const Form = styled.form`
         gap: 4rem;
     }
 
-    @media (max-width: 1100px) {
-        width: 60rem;
-        > div {
-        display: flex;
-        flex-direction: column;
-        gap: .8rem;
-    }
-    }
     @media (max-width: 700px) {
-        width: 45rem;
         > div {
         display: flex;
         flex-direction: column;
@@ -116,7 +98,8 @@ export const Form = styled.form`
 `;
 
 export const Footer = styled.div`
-    width: 100rem;
+    width: 100%;
+
     padding: 1.6rem;
 
     background: ${({theme}) => theme.COLORS.BACKGROUND_600};
@@ -132,35 +115,24 @@ export const Footer = styled.div`
     gap: 1.6rem;
 
 
-    margin-bottom: 4rem;
-    @media (max-width: 1100px) {
-        width: 60rem;
-    }
-    @media (max-width: 700px) {
-        width: 45rem;
-    }
+    margin: 0 auto 4rem;
 `;
 
 export const RouteButtons = styled.div`
+    width: 100%;
     grid-area: buttons;
 
     display: flex;
     flex-direction: row;
+
     gap: 4rem;
 
     > button:first-child {
         color: ${({theme}) => theme.COLORS.PINK};
         background: ${({theme}) => theme.COLORS.BACKGROUND_600};
     }
-    @media (max-width: 1100px) {
-        width: 60rem;
-        display: flex;
-        flex-direction: column-reverse;
-        gap: .8rem;
-    }
-
+    
     @media (max-width: 700px) {
-        width: 45rem;
         display: flex;
         flex-direction: column-reverse;
         gap: .8rem;

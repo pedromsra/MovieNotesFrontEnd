@@ -10,6 +10,7 @@ export const Container = styled.div`
     "header"
     "content"
     ;
+    justify-items: center;
 
     > main {
         grid-area: content;
@@ -17,6 +18,7 @@ export const Container = styled.div`
 
         padding: 4rem 2rem;
         width: 100%;
+        max-width: 113rem;
 
         display: grid;
         grid-template-rows: auto;
@@ -27,10 +29,9 @@ export const Container = styled.div`
         "notetag"
         "description"
         ;
-        justify-content: center;
 
         .back {
-            width: fit-content;
+            width: 100%;
             grid-area: back;
 
             display: flex;
@@ -47,7 +48,7 @@ export const Container = styled.div`
         }
 
         .notehead {
-            max-width: 113.7rem;
+            width: 100%;
             grid-area: head;
 
             display: flex;
@@ -59,14 +60,14 @@ export const Container = styled.div`
         }
 
         .notetag {
-            max-width: 113.7rem;
+            width: 100%;
             grid-area: notetag;
 
             margin-bottom: 4rem;
         }
 
         .description {
-            max-width: 113.7rem;
+            width: 100%;
             grid-area: description;
 
             text-align: justify;
@@ -81,7 +82,7 @@ export const Container = styled.div`
 `;
 
 export const Profile = styled.div`
-    max-width: 113.7rem;
+    width: 100%;
     grid-area: profile;
 
     display: flex;
